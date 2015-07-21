@@ -44,9 +44,9 @@ nei6 <- rbind(nei6,
                     .drop=FALSE, summarize,
                     TotalEmissions=sum(Emissions),
                     city="Los Angeles County"))
-ggplot(nei6, aes(year, TotalEmissions)) +
-    facet_grid(. ~ city) +
-    geom_point(color="steelblue", size=4) +
-    geom_smooth(method="lm") +
-    labs(title="Comparison of Total Emissions from Motor Vehicles")
-ggsave(filename = "plot6.png")
+ggsave(filename = "plot6.png",
+       plot=ggplot(nei6, aes(year, TotalEmissions)) +
+           facet_grid(. ~ city) +
+           geom_point(color="steelblue", size=4) +
+           geom_smooth(method="lm") +
+           labs(title="Comparison of Total Emissions from Motor Vehicles"))

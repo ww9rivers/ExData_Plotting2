@@ -24,8 +24,9 @@ if (!(testing & "NEI" %in% ls() & "SCC" %in% ls())) {
 #'    decreases in emissions from 1999–2008 for Baltimore City? Which have
 #'    seen increases in emissions from 1999–2008? Use the ggplot2 plotting
 #'    system to make a plot answer this question.
+library(plyr)
 library(ggplot2)
-plot.new()
+
 nei3 <- ddply(NEI[NEI$fips=="24510",], c("year"), .drop=FALSE)
 nei3$src <- factor(nei3$type)
 ggplot(nei3, aes(year, Emissions)) +

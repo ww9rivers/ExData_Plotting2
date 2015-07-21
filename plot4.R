@@ -1,7 +1,7 @@
 #' Assignment:
 #'   https://class.coursera.org/exdata-030/human_grading/view/courses/975125/assessments/4/submissions
 
-
+library(plyr)
 library(ggplot2)
 
 data_url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"

@@ -1,6 +1,8 @@
 #' Assignment:
 #'   https://class.coursera.org/exdata-030/human_grading/view/courses/975125/assessments/4/submissions
 
+library(plyr)
+
 data_url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"
 data_file <- "NEI_data.zip"
 scc_file <- "Source_Classification_Code.rds"
